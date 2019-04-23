@@ -1,0 +1,93 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 250px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+input:focus{
+outline: 3px solid orange;
+border-color: teal;
+
+  
+}
+
+.Table{
+  border-spacing: 0px;
+  background: lightgray;
+  width: 100%;
+}
+
+.DataTable{
+  position: relative;
+  max-width: 100vw;
+  height: 400px;
+  
+    display:block;
+    overflow:auto;
+}
+
+.Cell{
+  border: 1px solid lightcoral;
+  text-align: left;
+  vertical-align: top;
+}
+
+.Cell-fixed{
+  border: 1px solid lightcoral;
+  position: absolute;
+  top: auto;
+  left: 0;
+  width: 140px;
+  white-space: unset;
+  text-align: left;
+  backface-visibility: hidden;
+  background: rosybrown;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding: 0;
+}
+
+.ScrollContainer{
+  overflow-x: auto;
+  margin-left: 140px;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+#page-numbers {
+  list-style: none;
+  display: flex;
+}
+
+#page-numbers > li {
+  margin-right: 0.3em;
+  color: blue;
+  user-select: none;
+  cursor: pointer;
+}

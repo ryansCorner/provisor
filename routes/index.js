@@ -6,5 +6,5 @@ const clientsRoutes = require('./Clients.Routes')
 module.exports = router;
 
 router.use('/scrape', scrapeRoutes)
-router.use('/client', clientRoutes)
+router.use('/', clientRoutes)
 router.use('/clients', clientsRoutes)

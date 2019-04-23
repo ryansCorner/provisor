@@ -1,4 +1,4 @@
-// const ClientService = require('../service/clientService')
+const ClientService = require('../service/clientService')
 
 module.exports = {
 
