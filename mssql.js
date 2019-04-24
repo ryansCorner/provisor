@@ -4,13 +4,12 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const poolConfig = { min: 2, max: 4, log: true };
+const poolConfig = { min: 2, max: 4, log: false };
 
 var connectionConfig = {
     server: process.env.SQL_SERVER_NAME,
     userName: process.env.SQL_USER_NAME,
     password: process.env.SQL_PASSWORD,
-    driver: 'tedious',
     options: {
         database: process.env.SQL_DATABASE_NAME,
         instanceName: process.env.SQL_INSTANCE_NAME
