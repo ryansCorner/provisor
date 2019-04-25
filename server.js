@@ -55,9 +55,9 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.use("/server/server.js", routes)
 app.use('/server/server.js/scrape', scrape)
 
-app.get("/*", function (req, res) {
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-})
+// app.get("/*", function (req, res) {
+//     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+// })
 server.listen(process.env.PORT || 3000, () => console.log(`Listening on port ${port}`));
 // server.setTimeout(9900000);
 
