@@ -7,13 +7,22 @@ dotenv.config();
 const poolConfig = { min: 2, max: 4, log: false };
 
 var connectionConfig = {
-    server: process.env.SQL_SERVER_NAME,
-    userName: process.env.SQL_USER_NAME,
-    password: process.env.SQL_PASSWORD,
-    options: {
-        database: process.env.SQL_DATABASE_NAME,
-        instanceName: process.env.SQL_INSTANCE_NAME
+    "user": process.env.SQL_USER_NAME,
+    "password": process.env.SQL_PASSWORD,
+    "server": process.env.SQL_SERVER_NAME,
+    "database": process.env.SQL_DATABASE_NAME,
+    "port": '61427',
+    "dialect": "mssql",
+    "dialectOptions": {
+        "instanceName": "SQLEXPRESS"
     }
+    // server: process.env.SQL_SERVER_NAME,
+    // userName: process.env.SQL_USER_NAME,
+    // password: process.env.SQL_PASSWORD,
+    // options: {
+    //     database: process.env.SQL_DATABASE_NAME,
+    //     instanceName: process.env.SQL_INSTANCE_NAME
+    // }
 };
 
 const pool = new ConnectionPool(poolConfig, connectionConfig);
