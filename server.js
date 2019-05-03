@@ -58,7 +58,7 @@ app.use('/server/server.js/scrape', scrape)
 app.get("/*", function (req, res) {
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 })
-server.listen(process.env.PORT || 3000, () => console.log(`Listening on port ${port}`));
+server.listen(process.env.PORT || 5000, () => console.log(`Listening on port ${port}`));
 // server.setTimeout(9900000);
 
 // app.use(haltOnTimedout);
