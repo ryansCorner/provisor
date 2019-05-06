@@ -18,6 +18,7 @@ const server = require('http').Server((app), setTimeout((timeout) => { return co
 function haltOnTimedout(req, res, next) {
     if (!req.timedout) next();
 }
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 
 
@@ -52,7 +53,6 @@ app.use((req, res, next) => {
     //throw new Error("Bazunga!");
 });
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use("/server/server.js", routes)
 app.use('/server/server.js/scrape', scrape)
