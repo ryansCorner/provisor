@@ -4,8 +4,10 @@ const path = require('path');
 
 const scrape = require('./routes/scraper.Routes')
 const routes = require('./routes')
-const port = process.env.PORT || 3000;
-const app = express();
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 8000;
+} const app = express();
 
 
 app.use(bodyParser.json({ limit: '50mb', extended: false }))
