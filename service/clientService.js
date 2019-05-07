@@ -1,6 +1,11 @@
 const sql = require('../mssql')
 const TYPES = require('tedious').TYPES
 const iDataAccess = require('./interfaces.js/iDataService')()
+const jsonfile = require('jsonfile')
+
+const file = './clients.json'
+// const obj = { name: 'JP' }
+
 
 const createTable = (client) => {
     console.log('this is the client var: ', client)
@@ -126,6 +131,11 @@ const clientSearch = (keyword) => {
         })
         .then(response => {
             console.log('this is the search response: ', response.resultSets)
+            jsonfile.writeFile(file, response.resultSets, { spaces: 2 })
+                .then(res => {
+                    console.log('Write complete')
+                })
+                .catch(error => console.error(error))
             return response.resultSets[0]
         })
         .catch(err => {

@@ -1,11 +1,13 @@
 {
   "proxy": "https://localhost:/3000",
+  "homepage": "https://wwww.localhost:/3000",
   "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@shopify/polaris": "^3.13.0",
     "axios": "^0.18.0",
+    "jsonfile": "^5.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",

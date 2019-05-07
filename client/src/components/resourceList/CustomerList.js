@@ -6,7 +6,10 @@ import ClientService from '../../services/ClientService'
 import axios from 'axios'
 import { filter } from 'rsvp';
 import { withRouter } from 'react-router-dom'
+import jsonfile from 'jsonfile'
 
+const file = '/tmp/data.json'
+// const obj = { name: 'JP' }
 
 const sortOptions = [
     { label: 'Newest update', value: 'DATE_MODIFIED_DESC' },
@@ -142,15 +145,25 @@ class CustomerList extends React.Component {
 
     onSearchSuccess = event => {
         console.log('search success', event)
+        // this.writeFile(event.data)
         this.setState({
             displayedItems: event.data,
             todos: event.data
         })
+
     }
 
     onSearchError = error => {
         console.log('search error', error)
     }
+
+    // writeFile = data => {
+    //     jsonfile.writeFile(file, data, { spaces: 2 })
+    //         .then(res => {
+    //             console.log('Write complete')
+    //         })
+    //         .catch(error => console.error(error))
+    // }
 
     handleBulkEdit = () => {
         console.log('Opening bulk editor…');
