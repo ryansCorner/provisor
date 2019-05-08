@@ -1,17 +1,19 @@
 {
   "proxy": "https://localhost:/3000",
-  "homepage": "https://secret-reef-91097.herokuapp.com/",
+  "homepage": "https://provisorsclients.azurewebsites.",
   "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@shopify/polaris": "^3.13.0",
     "axios": "^0.18.0",
+    "global": "^4.3.2",
     "jsonfile": "^5.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0"
+    "react-scripts": "3.0.0",
+    "serve": "^11.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "license": "MIT",
+  "script": "./server.js",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
@@ -24,6 +25,7 @@
   "scripts": {
     "start": "yarn run build-client && nodemon server.js",
     "start-local": "yarn run build-client && PORT=8080 nodemon server.js",
+    "build": "yarn start",
     "build-client": "cd client && yarn run build && cd ..",
     "heroku-postbuild": "cd client && yarn && yarn run build"
   }
