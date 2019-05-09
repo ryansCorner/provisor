@@ -1,6 +1,5 @@
 {
   "proxy": "https://localhost:/3000",
-  "homepage": "https://provisorsclients.azurewebsites.",
   "name": "client",
   "version": "0.1.0",
   "private": true,

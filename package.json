@@ -1,6 +1,4 @@
 {
-  "proxy": "https://localhost:/3000",
-  "homepage": ".",
   "name": "provisors",
   "version": "1.0.0",
   "main": "server.js",
